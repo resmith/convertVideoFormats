@@ -1,0 +1,6 @@
+export TARGET_DIR=/media/robert/Data/MyHomeMovies
+export SUB_DIR=_HomeCooking
+cd $TARGET_DIR
+cd $SUB_DIR
+
+find . -type f -iregex '.*\(MTS\|mpeg\|avi\|wmv\|mov\)' -exec ffmpeg -i {} {}.mp4 \; 
